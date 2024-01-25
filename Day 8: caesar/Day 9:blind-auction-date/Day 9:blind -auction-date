@@ -1,0 +1,32 @@
+from replit import clear
+b=[]
+x=True
+i=0
+def high(b):
+  h=0
+  k=0
+  for t in b:
+    amt=b[k]["bid"]
+    if amt>h:
+      h=amt
+      w=b[k]["name"]
+      k=k+1
+  print("winner:"+w)
+
+while x is True:
+  n=input("enter ur name")
+  p=input("what's ur bid")
+  p=int(p)
+  b.insert(i,{
+    "name":n,
+    "bid":p
+  })
+  i=i+1
+  u=input("do u want to continue? yes")
+  if u=="no":
+    x=False
+  else:
+    x=True
+    clear()
+print(b)
+high(b)
